@@ -9,6 +9,43 @@
  */
 {
   "sections": {
+    "rich_text_xkzwqB": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_wAfrWt": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_heJ8Q3": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>WINTER SALE</strong>",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_AUaCFj": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_wAfrWt",
+        "heading_heJ8Q3",
+        "richtext_AUaCFj"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -34,6 +71,33 @@
             "button_2_text_color": "#000000",
             "background": "",
             "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        },
+        "image_baRG3B": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HOME_PAGE_BANNER_2_13660989-0b1a-4e81-95c4-4ddb3648276f.webp",
+            "mobile_image": "shopify://shop_images/HOME_PAGE_MOBILE_BANNER.webp",
+            "subheading": "Tell your story",
+            "title": "Image slide",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
             "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
@@ -69,6 +133,7 @@
       },
       "block_order": [
         "slide-1",
+        "image_baRG3B",
         "slide-2"
       ],
       "settings": {
@@ -82,9 +147,113 @@
         "controls_color": "#ffffff"
       }
     },
+    "collection_list_YcpKfL": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_Gjcpaj": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_Ge4NW3": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_m9TLiW": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_M8YFwd": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_Gjcpaj",
+        "collection_Ge4NW3",
+        "collection_m9TLiW",
+        "collection_M8YFwd"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
+        "collection_P8yDmh": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        },
+        "collection_eA7Hiz": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        },
         "collection-1": {
           "type": "collection",
           "settings": {
@@ -97,6 +266,8 @@
         }
       },
       "block_order": [
+        "collection_P8yDmh",
+        "collection_eA7Hiz",
         "collection-1"
       ],
       "settings": {
@@ -197,40 +368,10 @@
             "overlay_opacity": 30
           }
         },
-        "collection-3": {
+        "collection_A4JTxt": {
           "type": "collection",
           "settings": {
-            "color_scheme": "",
-            "collection": "",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "View products",
-            "button_link": "",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "View products",
-            "button_link": "",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection-5": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-4",
             "collection": "",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
@@ -261,9 +402,7 @@
       "block_order": [
         "collection-1",
         "collection-2",
-        "collection-3",
-        "collection-4",
-        "collection-5",
+        "collection_A4JTxt",
         "collection-6"
       ],
       "settings": {
@@ -480,7 +619,9 @@
     }
   },
   "order": [
+    "rich_text_xkzwqB",
     "slideshow",
+    "collection_list_YcpKfL",
     "featured-collections",
     "multi-column",
     "collection-list",
