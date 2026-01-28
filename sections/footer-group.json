@@ -84,8 +84,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "Footer Menu",
-            "content": "<ul><li><a href=\"https://www.ironwaywatches.com/pages/about-us\">About Us</a></li><li><a href=\"https://www.ironwaywatches.com/policies/shipping-policy\">Shipping Information</a></li><li><a href=\"https://www.ironwaywatches.com/policies/refund-policy\">Returns & Exchanges</a></li><li><a href=\"https://www.ironwaywatches.com/pages/warranty\">Warranty & Service</a></li><li><a href=\"https://www.ironwaywatches.com/policies/terms-of-service\">Terms and Conditions</a></li><li><a href=\"https://www.ironwaywatches.com/policies/privacy-policy\">Privacy Policy</a></li><li><a href=\"https://www.ironwaywatches.com/pages/faq\">FAQ</a></li><li><a href=\"https://www.ironwaywatches.com/pages/contact-us\">Contact Us</a></li><li><a href=\"https://www.ironwaywatches.com/apps/parcelpanel\">Track your order</a></li></ul>",
+            "title": "",
+            "content": "",
             "enable_follow_on_shop": true
           }
         },
@@ -93,7 +93,7 @@
           "type": "newsletter",
           "settings": {
             "title": "NEVER MISS A DROP",
-            "content": "<p>Join the Ironway list and get early access to drops and exclusive deals.<br/><br/></p>",
+            "content": "<p>Join the Ironway list and get early access to drops and exclusive deals<br/><br/><br/></p>",
             "button_background": "#1c1c1c",
             "button_text_color": ""
           }
