@@ -37,13 +37,20 @@
           "settings": {
             "text": "Announce something here"
           }
+        },
+        "message_gQAiL8": {
+          "type": "message",
+          "settings": {
+            "text": "WINTER SALE: 65% OFF EVERYTHING"
+          }
         }
       },
       "block_order": [
         "message_JbUr7C",
         "message_bm6HU4",
         "message_jBWHGW",
-        "message_HgQqm6"
+        "message_HgQqm6",
+        "message_gQAiL8"
       ],
       "settings": {
         "color_scheme": "",
@@ -61,8 +68,8 @@
         "enable_sticky": true,
         "show_separation_border": true,
         "reduce_padding": false,
-        "logo": "{{ shop.brand.logo }}",
-        "logo_max_width": 140,
+        "logo": "shopify://shop_images/Ironway_logo_horizontal_7.avif",
+        "logo_max_width": 130,
         "logo_mobile_max_width": 100,
         "menu": "main-menu",
         "sidebar_menu": "",
