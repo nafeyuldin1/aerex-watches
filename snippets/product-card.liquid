@@ -1,6 +1,6 @@
 {%- comment -%}
 ----------------------------------------------------------------------------------------------------------------------
-PRODUCT CARD COMPONENT (Customized for Image Swatches)
+PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
 ----------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
 
@@ -52,7 +52,7 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
         {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-cover{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
         
         {%- comment -%} Added ID for JS targeting {%- endcomment -%}
-        {{- product.featured_media | image_url: width: product.featured_media.width | image_tag: id: product_image_id, loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', class: main_image_classes, id: product.id -}}
+        {{- product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', class: main_image_classes, id: product.id -}}
 
         {%- if show_secondary_image and product.media.size > 1 -%}
           {%- assign next_media = product.media[product.featured_media.position] | default: product.media[1] -%}
@@ -137,7 +137,7 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
             {%- else -%}
               {%- comment -%}
               ----------------------------------------------------------------
-              CUSTOM IMAGE SWATCH LOGIC
+              CUSTOM IMAGE SWATCH LOGIC (SQUARE)
               ----------------------------------------------------------------
               {%- endcomment -%}
               <fieldset class="h-stack wrap justify-center gap-1" data-option-position="{{ product_option.position }}">
@@ -162,7 +162,7 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
                     {%- endif -%}
                   {%- endfor -%}
 
-                  {%- comment -%} Fallback if no specific variant image exists, use a blank placeholder or color logic {%- endcomment -%}
+                  {%- comment -%} Fallback if no specific variant image exists {%- endcomment -%}
                   {%- if swatch_bg_image == blank -%}
                      {%- assign swatch_bg_image = 'https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png' -%}
                   {%- endif -%}
@@ -177,10 +177,13 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
                       background-image: url('{{ swatch_bg_image }}'); 
                       background-size: cover; 
                       background-position: center; 
+                      /* border-radius removed for square shape */
+                      border-radius: 0; 
                       cursor: pointer;
                       border: 1px solid #e5e5e5;
-                      transition: transform 0.2s;
+                      transition: transform 0.2s, border-color 0.2s;
                       position: relative;
+                      box-sizing: border-box;
                     "
                     title="{{ option_value }}"
                     data-main-image="{{ main_swap_image }}"
@@ -199,7 +202,9 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
                         position: absolute;
                         top: -3px; left: -3px; right: -3px; bottom: -3px;
                         border: 1px solid transparent;
-                        border-radius: 50%;
+                        /* border-radius removed for square shape */
+                        border-radius: 0;
+                        pointer-events: none;
                     "></span>
                   </label>
 
@@ -207,9 +212,17 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
               </fieldset>
               
               <style>
-                .custom-image-swatch:hover { transform: scale(1.1); }
-                .custom-image-swatch.is-selected { border-color: #000 !important; }
-                .custom-image-swatch.is-selected .selection-ring { border-color: #000 !important; }
+                /* Hover effect */
+                .custom-image-swatch:hover { 
+                   border-color: #999 !important;
+                }
+                /* Selected state */
+                .custom-image-swatch.is-selected { 
+                  border-color: #000 !important; 
+                }
+                .custom-image-swatch.is-selected .selection-ring { 
+                  border-color: #000 !important; 
+                }
                 /* Hide standard radio input */
                 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
               </style>
@@ -235,7 +248,7 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
     
     // 2. Select the radio input inside the label to handle logic
     var input = element.querySelector('input');
-    input.checked = true;
+    if(input) input.checked = true;
 
     // 3. Update Visual Selection State (Remove class from siblings, add to self)
     var siblings = element.parentElement.querySelectorAll('.custom-image-swatch');
@@ -244,11 +257,12 @@ PRODUCT CARD COMPONENT (Customized for Image Swatches)
 
     // 4. Find the main image in this product card and update it
     if(newImageSrc && newImageSrc !== '') {
-        // We find the image by the product ID we added earlier
+        // We find the image by the product ID we added earlier to the main image tag
         var mainImg = document.getElementById(productId);
         if(mainImg) {
             mainImg.src = newImageSrc;
-            mainImg.srcset = newImageSrc; // Update srcset to prevent reverting on resize
+            // Important: clear srcset to ensure the new src is actually used by the browser
+            mainImg.removeAttribute('srcset'); 
         }
     }
   }
