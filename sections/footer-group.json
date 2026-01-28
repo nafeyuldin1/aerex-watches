@@ -84,7 +84,7 @@
         "links": {
           "type": "links",
           "settings": {
-            "menu": "main-menu",
+            "menu": "policies",
             "show_menu_title": true,
             "menu_title": "Policies"
           }
