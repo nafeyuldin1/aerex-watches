@@ -81,9 +81,11 @@
             "size_chart_page": ""
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
+        "liquid_M3FeWM": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"v-stack gap-4\" bis_skin_checked=\"1\">\n          \n          \n          \n          \n          <div class=\"stock-info\" style=\"\" bis_skin_checked=\"1\">\n            <img src=\"//www.ironwaywatches.com/cdn/shop/t/16/assets/STOCK.webp?v=23911160876831325091769261364\" alt=\"Viewers\">\n            <span id=\"stockText\">Only <b>5</b> items left in stock.</span>\n          </div>\n        \n\n\n<script>\n  const translations = {\n    en: \"Only <b>5</b> items left in stock.\",\n    es: \"Solo quedan <b>5</b> artículos en stock.\",\n    fr: \"Il ne reste plus que <b>5</b> articles en stock.\",\n    de:\"Nur noch <b>5</b> auf Lager.\",\n    it:\"Sono rimasti solo <b>5</b> articoli in stock.\"\n  };\n  \n  document.addEventListener('DOMContentLoaded', function() {\n    const currentLang = localStorage.getItem('translation-lab-lang') || 'en';\n    const stockContainer = document.getElementById('stockContainer');\n    const stockText = document.getElementById('stockText');\n\n    if (translations[currentLang]) {\n      stockText.innerHTML = translations[currentLang];\n      \n      \n    }\n  });\n</script>\n\n<style>\n.stock-info {\n    display: flex;\n    gap: 10px;\n    align-items: center;\n}\n.stock-info img {\n    width: 20px;\n    height: 20px;\n}\n</style>\n\n\n        <buy-buttons class=\"buy-buttons \" form=\"product-form-main-12335431024980-template--27408053403988__main\">\n<button type=\"submit\" class=\"button w-full\" style=\"--button-background: 45 53 27;--button-outline-color: 45 53 27;--button-text-color: 255 255 255;\">Add to cart</button></buy-buttons>\n      </div>"
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -147,7 +149,7 @@
         "feature_with_icon_tHNnHM",
         "feature_with_icon_eeWJLA",
         "variant_picker",
-        "quantity_selector",
+        "liquid_M3FeWM",
         "buy_buttons",
         "description",
         "accordion_6RTpxn",
