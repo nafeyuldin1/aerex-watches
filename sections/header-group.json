@@ -14,28 +14,10 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message_JbUr7C": {
-          "type": "message",
-          "settings": {
-            "text": "Announce something here"
-          }
-        },
         "message_bm6HU4": {
           "type": "message",
           "settings": {
             "text": "<strong>Free shipping on all orders</strong>"
-          }
-        },
-        "message_jBWHGW": {
-          "type": "message",
-          "settings": {
-            "text": "<strong>Free shipping on all orders</strong>"
-          }
-        },
-        "message_HgQqm6": {
-          "type": "message",
-          "settings": {
-            "text": "Announce something here"
           }
         },
         "message_gQAiL8": {
@@ -46,10 +28,7 @@
         }
       },
       "block_order": [
-        "message_JbUr7C",
         "message_bm6HU4",
-        "message_jBWHGW",
-        "message_HgQqm6",
         "message_gQAiL8"
       ],
       "settings": {
