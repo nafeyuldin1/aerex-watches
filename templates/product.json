@@ -36,6 +36,42 @@
           "type": "separator",
           "settings": {}
         },
+        "feature_with_icon_wQ6Nkr": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "FREE WORLDWIDE SHIPPING",
+            "link": "",
+            "icon": "picto-delivery-truck",
+            "icon_width": 32,
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#2d351b",
+            "border_color": ""
+          }
+        },
+        "feature_with_icon_tHNnHM": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "30 DAYS RETURNS",
+            "link": "",
+            "icon": "picto-return",
+            "icon_width": 32,
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#2d351b",
+            "border_color": ""
+          }
+        },
+        "feature_with_icon_eeWJLA": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "2 YEAR WARRANTY",
+            "link": "",
+            "icon": "picto-shield",
+            "icon_width": 32,
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#2d351b",
+            "border_color": ""
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -107,6 +143,9 @@
         "price",
         "payment_terms",
         "separator",
+        "feature_with_icon_wQ6Nkr",
+        "feature_with_icon_tHNnHM",
+        "feature_with_icon_eeWJLA",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -146,10 +185,63 @@
         "title": "Related products",
         "content": ""
       }
+    },
+    "featured_collections_id9Yif": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_PjQKC8": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "products_count": 8,
+            "title": "Watches",
+            "link_url": "",
+            "link_text": ""
+          }
+        },
+        "collection_6TbfqR": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "products_count": 8,
+            "title": "Explorer Gear",
+            "link_url": "",
+            "link_text": ""
+          }
+        },
+        "collection_Uq9hDC": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "products_count": 8,
+            "title": "EDC Gear",
+            "link_url": "",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_PjQKC8",
+        "collection_6TbfqR",
+        "collection_Uq9hDC"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "featured_collections_id9Yif"
   ]
 }
