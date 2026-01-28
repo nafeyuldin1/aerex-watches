@@ -17,41 +17,41 @@
         "icon-1": {
           "type": "item",
           "settings": {
-            "icon": "picto-award-gift",
+            "icon": "picto-delivery-truck",
             "icon_width": 24,
             "mobile_icon_width": 24,
-            "title": "Free delivery worldwide",
-            "content": "<p>Short content about your store</p>"
+            "title": "<strong>FREE SHIPPING WORLDWIDE</strong>",
+            "content": "<p><em>Shipped within 24h from our warehouse – no minimum spend.</em></p>"
           }
         },
         "icon-2": {
           "type": "item",
           "settings": {
-            "icon": "picto-award-gift",
+            "icon": "picto-return",
             "icon_width": 24,
             "mobile_icon_width": 24,
-            "title": "Satisfied or refunded",
-            "content": "<p>Short content about your store</p>"
+            "title": "<strong>30-DAY RETURNS</strong>",
+            "content": "<p><em>Try them on. Not feeling it? Simply return it within 30 days.</em></p>"
           }
         },
         "icon-3": {
           "type": "item",
           "settings": {
-            "icon": "picto-award-gift",
+            "icon": "picto-star",
             "icon_width": 24,
             "mobile_icon_width": 24,
-            "title": "Top-notch support",
-            "content": "<p>Short content about your store</p>"
+            "title": "<strong>MILITARY-GRADE DURABILITY</strong>",
+            "content": "<p><em>Crafted to military standards with premium materials.</em></p>"
           }
         },
         "icon-4": {
           "type": "item",
           "settings": {
-            "icon": "picto-award-gift",
+            "icon": "picto-lock",
             "icon_width": 24,
             "mobile_icon_width": 24,
             "title": "Secure payments",
-            "content": "<p>Short content about your store</p>"
+            "content": "<p>Your Payments Are 100% Secure</p>"
           }
         }
       },
@@ -62,7 +62,7 @@
         "icon-4"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "stack_on_mobile": false,
         "icon_color": "",
@@ -73,20 +73,28 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "links": {
-          "type": "links",
-          "settings": {
-            "menu": "footer",
-            "show_menu_title": true,
-            "menu_title": ""
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
             "title": "",
-            "content": "",
+            "content": "<p>FOR THOSE WHO STAND FOR MORE</p><p>At Ironway, we design timepieces for men who live with intention.</p><p>Built for the field, trusted for everyday wear — no flash, just function and timeless style.</p><p><strong>Contact us anytime at:</strong><br/>🛒 Ironway<br/>📧 <a href=\"mailto:support@ironwaywatches.com\" title=\"mailto:support@ironwaywatches.com\">support@ironwaywatches.com<br/></a>📍 30 N Gould St, STE R, Sheridan, WY 82801, USA</p>",
             "enable_follow_on_shop": true
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "main-menu",
+            "show_menu_title": true,
+            "menu_title": "Policies"
+          }
+        },
+        "links_NRYTQb": {
+          "type": "links",
+          "settings": {
+            "menu": "main-menu",
+            "show_menu_title": true,
+            "menu_title": "Quick links"
           }
         },
         "newsletter": {
@@ -100,8 +108,9 @@
         }
       },
       "block_order": [
-        "links",
         "text",
+        "links",
+        "links_NRYTQb",
         "newsletter"
       ],
       "settings": {
