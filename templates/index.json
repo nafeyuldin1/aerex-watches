@@ -265,6 +265,36 @@
         "subheading": ""
       }
     },
+    "featured_collections_VY8fAa": {
+      "type": "featured-collections",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "collection_list_YDFJFb": {
+      "type": "collection-list",
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
     "multi-column": {
       "type": "multi-column",
       "blocks": {
@@ -599,6 +629,43 @@
         "button_link": "",
         "button_text": "View all"
       }
+    },
+    "rich_text_7fPzcT": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_mptmYN": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_zMLqTf": {
+          "type": "heading",
+          "settings": {
+            "text": "Heading",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_GUwRL7": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_mptmYN",
+        "heading_zMLqTf",
+        "richtext_GUwRL7"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
     }
   },
   "order": [
@@ -606,6 +673,8 @@
     "rich_text_xkzwqB",
     "collection_list_YcpKfL",
     "featured-collections",
+    "featured_collections_VY8fAa",
+    "collection_list_YDFJFb",
     "multi-column",
     "collection-list",
     "before-after",
@@ -613,6 +682,7 @@
     "multiple-media-with-text",
     "newsletter",
     "shop-the-look",
-    "blog-posts"
+    "blog-posts",
+    "rich_text_7fPzcT"
   ]
 }
