@@ -9,43 +9,6 @@
  */
 {
   "sections": {
-    "rich_text_xkzwqB": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_wAfrWt": {
-          "type": "subheading",
-          "settings": {
-            "text": ""
-          }
-        },
-        "heading_heJ8Q3": {
-          "type": "heading",
-          "settings": {
-            "text": "<strong>WINTER SALE</strong>",
-            "heading_tag": "h1"
-          }
-        },
-        "richtext_AUaCFj": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_wAfrWt",
-        "heading_heJ8Q3",
-        "richtext_AUaCFj"
-      ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": false
-      }
-    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -147,6 +110,47 @@
         "controls_color": "#ffffff"
       }
     },
+    "rich_text_xkzwqB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_heJ8Q3": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>WINTER SALE</strong>",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_AUaCFj": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Start the year strong with<strong>65% OFF</strong>Ironway watches & gear.<br/><br/>Built for new missions, new ground, and everyday reliability.<br/><br/></p>"
+          }
+        },
+        "button_mcRxDr": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "SHOP THE WINTER SALE",
+            "url": "shopify://collections/all",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_heJ8Q3",
+        "richtext_AUaCFj",
+        "button_mcRxDr"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
     "collection_list_YcpKfL": {
       "type": "collection-list",
       "blocks": {
@@ -217,6 +221,7 @@
         "collection_m9TLiW",
         "collection_M8YFwd"
       ],
+      "disabled": true,
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
         "color_scheme": "",
@@ -619,8 +624,8 @@
     }
   },
   "order": [
-    "rich_text_xkzwqB",
     "slideshow",
+    "rich_text_xkzwqB",
     "collection_list_YcpKfL",
     "featured-collections",
     "multi-column",
