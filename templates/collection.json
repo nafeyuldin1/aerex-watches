@@ -17,7 +17,7 @@
         "image_size": "md",
         "image": "shopify://shop_images/4327_x_1567_-WATCH_STRAP_BANNER.webp",
         "content_width": "sm",
-        "enable_parallax": true,
+        "enable_parallax": false,
         "remove_vertical_spacing": true
       }
     },
