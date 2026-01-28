@@ -265,6 +265,35 @@
         "subheading": ""
       }
     },
+    "featured_collections_EkXhda": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_QGrTQw": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "products_count": 8,
+            "title": "Watches",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QGrTQw"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
     "featured_collections_Pi8FYz": {
       "type": "featured-collections",
       "blocks": {
@@ -273,7 +302,7 @@
           "settings": {
             "collection": "frontpage",
             "products_count": 8,
-            "title": "",
+            "title": "EDC Gear",
             "link_url": "",
             "link_text": "View all"
           }
@@ -702,6 +731,7 @@
     "rich_text_xkzwqB",
     "collection_list_YcpKfL",
     "featured-collections",
+    "featured_collections_EkXhda",
     "featured_collections_Pi8FYz",
     "featured_collections_VY8fAa",
     "collection_list_YDFJFb",
