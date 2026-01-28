@@ -67,14 +67,37 @@
             "payment_button_text_color": ""
           }
         },
-        "complementary_products": {
-          "type": "complementary_products",
+        "accordion_6RTpxn": {
+          "type": "accordion",
           "settings": {
-            "title": "Pairs well with",
-            "products_count": 2,
-            "show_below_gallery": true,
-            "stack_products": false,
-            "show_quick_buy": true
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "<strong>FREE WORLDWIDE SHIPPING</strong>",
+            "content": "<p>We offer<strong>free shipping</strong>on all Ironway orders—no matter where you are in the world. Every order is shipped with<strong>track & trace included</strong>, so you can follow your package every step of the way. Orders are securely packed and typically dispatched within 48 hours.<br/><br/><strong>Estimated delivery times:</strong>• USA & Canada: 5–9 business days<br/>• Europe: 4–8 business days<br/>• Australia & NZ: 6–10 business days<br/>• Rest of the world: 7–14 business days<br/><br/></p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_68XRqw": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "<strong>30 DAYS RETURNS</strong>",
+            "content": "<p>Not 100% satisfied? No worries. You have <strong>30 days to return</strong> your order for a full refund or exchange. The item must be in original condition and returned with all packaging.</p><p>To start a return, simply contact our team at <strong>support@ironwaywatches.com</strong>.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_NX7z3U": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "<strong>2 YEAR WARRANTY</strong>",
+            "content": "<p><strong>Every Ironway product is backed by a 2-year international warranty.</strong></p><p>This covers any manufacturing defects in materials or workmanship. If you experience an issue, we’ll repair or replace the item free of charge—no hassle, no stress.</p><p><strong>Use it the Iron Way — we’ve got your back.</strong></p>",
+            "liquid": "",
+            "page": ""
           }
         }
       },
@@ -88,7 +111,9 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "complementary_products"
+        "accordion_6RTpxn",
+        "accordion_68XRqw",
+        "accordion_NX7z3U"
       ],
       "settings": {
         "color_scheme": "",
