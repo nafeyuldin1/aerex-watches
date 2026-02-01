@@ -125,9 +125,24 @@ PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
     {%- if show_swatches and settings.product_color_display != 'hide' -%}
       {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
 
-      {%- for color_label in color_label_list -%}
-        {%- if product.options_by_name[color_label] != blank -%}
-          {%- assign product_option = product.options_by_name[color_label] -%}
+      {%- comment -%}
+      MODIFIED LOOP: Instead of just checking color_label_list, we iterate all options
+      and check if they are either 'Color' OR 'Variant'.
+      {%- endcomment -%}
+
+      {%- for product_option in product.options_with_values -%}
+        {%- assign option_name_downcase = product_option.name | downcase -%}
+        {%- assign is_swatch_option = false -%}
+
+        {%- if color_label_list contains option_name_downcase -%}
+          {%- assign is_swatch_option = true -%}
+        {%- endif -%}
+
+        {%- if option_name_downcase contains 'variant' -%}
+          {%- assign is_swatch_option = true -%}
+        {%- endif -%}
+
+        {%- if is_swatch_option -%}
           {%- capture name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
 
           {%- case settings.product_color_display -%}
@@ -148,7 +163,7 @@ PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
                     {%- assign selected = true -%}
                   {%- endif -%}
 
-                  {%- comment -%} Find the image associated with this specific color option {%- endcomment -%}
+                  {%- comment -%} Find the image associated with this specific color/variant option {%- endcomment -%}
                   {%- assign swatch_bg_image = '' -%}
                   {%- assign main_swap_image = '' -%}
                   
@@ -177,7 +192,6 @@ PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
                       background-image: url('{{ swatch_bg_image }}'); 
                       background-size: cover; 
                       background-position: center; 
-                      /* border-radius removed for square shape */
                       border-radius: 0; 
                       cursor: pointer;
                       border: 1px solid #e5e5e5;
@@ -202,7 +216,6 @@ PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
                         position: absolute;
                         top: -3px; left: -3px; right: -3px; bottom: -3px;
                         border: 1px solid transparent;
-                        /* border-radius removed for square shape */
                         border-radius: 0;
                         pointer-events: none;
                     "></span>
@@ -229,6 +242,7 @@ PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
 
           {%- endcase -%}
 
+          {%- comment -%} Break loop after displaying the first valid swatch set (Color or Variant) to prevent duplicates {%- endcomment -%}
           {%- break -%}
         {%- endif -%}
       {%- endfor -%}
