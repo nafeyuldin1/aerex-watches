@@ -44,7 +44,16 @@ Color swatch specific parameters:
 {%- capture id -%}swatch-{{ id_prefix }}-{{ section.id }}-{{ form }}-{{ name }}-{{ value | handle }}{%- endcapture -%}
 
 {%- liquid
-  if type == 'colors' or type == 'Variant' or type == 'block' and show_colors
+  # --------------------------------------------------------------------------------------
+  # CUSTOM LOGIC: FORCE THUMBNAIL FOR 'VARIANT' LABEL
+  # Agar label 'Variant' hai to type ko 'thumbnail' par set kar denge taake image show ho.
+  # --------------------------------------------------------------------------------------
+  assign name_downcase = name | downcase
+  if name_downcase contains 'variant'
+    assign type = 'thumbnail'
+  endif
+
+  if type == 'colors' or type == 'block' and show_colors
     if colors != blank
       assign size_limit = colors.size | at_most: 4
       assign rotation = '0deg'
