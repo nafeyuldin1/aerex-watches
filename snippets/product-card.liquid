@@ -125,20 +125,20 @@ PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
     {%- if show_swatches and settings.product_color_display != 'hide' -%}
       {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
 
-      {%- comment -%}
-      MODIFIED LOOP: Instead of just checking color_label_list, we iterate all options
-      and check if they are either 'Color' OR 'Variant'.
-      {%- endcomment -%}
-
       {%- for product_option in product.options_with_values -%}
         {%- assign option_name_downcase = product_option.name | downcase -%}
         {%- assign is_swatch_option = false -%}
+
+        {%- comment -%}
+        Logic Update:
+        Checks if option name is in the 'color list' OR contains 'variant' OR contains 'color'
+        {%- endcomment -%}
 
         {%- if color_label_list contains option_name_downcase -%}
           {%- assign is_swatch_option = true -%}
         {%- endif -%}
 
-        {%- if option_name_downcase contains 'variant' -%}
+        {%- if option_name_downcase contains 'variant' or option_name_downcase contains 'color' -%}
           {%- assign is_swatch_option = true -%}
         {%- endif -%}
 
@@ -242,7 +242,6 @@ PRODUCT CARD COMPONENT (Customized for Square Image Swatches)
 
           {%- endcase -%}
 
-          {%- comment -%} Break loop after displaying the first valid swatch set (Color or Variant) to prevent duplicates {%- endcomment -%}
           {%- break -%}
         {%- endif -%}
       {%- endfor -%}
