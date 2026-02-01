@@ -28,12 +28,26 @@ Supported variables
         assign option_downcase = option.name | downcase
         assign option_selector_type = selector_type
 
-        if color_label_list contains option_downcase
+        # --------------------------------------------------------------------------
+        # CUSTOM LOGIC: FORCE IMAGE SWATCH FOR 'VARIANT' LABEL
+        # Agar label mein 'variant' word aata hai, to type 'variant' set ho jaye
+        # taake wo image (thumbnail) show kare.
+        # --------------------------------------------------------------------------
+        if option_downcase contains 'variant'
+          assign option_selector_type = 'variant'
+        endif
+
+        # Check for Color labels (only runs if not forced to variant above, or overrides if needed)
+        # Note: If you want 'Variant' to ALWAYS win, keep the check above. 
+        # But standard color logic usually checks specifically for color labels.
+        # Below standard logic continues, but since we set 'variant' type above, 
+        # we need to make sure it doesn't get overridden by color logic unless necessary.
+        
+        if color_label_list contains option_downcase and option_selector_type != 'variant'
           assign option_selector_type = color_selector_type
 
           if option_selector_type == 'variant_image'
             # To use this mode every variant must have an attached media
-
             for variant in product.variants
               unless variant.featured_media
                 assign option_selector_type = 'color'
@@ -119,6 +133,7 @@ Supported variables
 
                 case option_selector_type
                   when 'variant'
+                    # Yahan hum check karte hain ke variant ki image exist karti hai
                     assign variant_for_value = product.variants | where: name, value | first
                     render 'swatch', type: 'thumbnail', value: value, image: variant_for_value.featured_media, selected: selected, name: name, form: form_id, id_prefix: forloop.index
                   when 'color'
