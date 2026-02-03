@@ -81,8 +81,17 @@
             "enable_follow_on_shop": true
           }
         },
+        "links_qHmhCG": {
+          "type": "links",
+          "settings": {
+            "menu": "footer",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
         "links": {
           "type": "links",
+          "disabled": true,
           "settings": {
             "menu": "policies",
             "show_menu_title": true,
@@ -91,6 +100,7 @@
         },
         "links_NRYTQb": {
           "type": "links",
+          "disabled": true,
           "settings": {
             "menu": "main-menu",
             "show_menu_title": true,
@@ -109,6 +119,7 @@
       },
       "block_order": [
         "text",
+        "links_qHmhCG",
         "links",
         "links_NRYTQb",
         "newsletter"
